@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<script type="text/javascript">
+
+window.onLoad=function hengshuping(){ 
+  if(window.orientation==180||window.orientation==0){ 
+        alert("竖屏状态！")        
+   } 
+if(window.orientation==90||window.orientation==-90){ 
+        alert("横屏状态！")         
+    } 
+ } 
+ </script>
+<!-- <meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no"> -->
+<meta charset="utf-8">
+<title></title>
+<link rel="stylesheet" href="css/jquery.fullPage.css">
+<style>
+body{
+    max-width: 720px;
+
+}
+#page-1{
+    position: relative;
+    border-radius:4%; 
+}
+#page-2{
+    position: relative;
+    border-radius: 4%;
+}   
+#page-3{
+    position: relative;
+    border-radius: 4%;
+}
+#page-4{
+    position: relative;
+    border-radius: 4%;
+}
+.tm{
+    opacity: 0.8;
+}
+.tm:hover{
+    opacity: 1;
+}
+
+
+                        /*第一页*/
+#bottom1 {
+    position: absolute;
+    width: 99.62%;
+    height: 21.16%;
+    bottom: 0px;
+    left: 0px;
+}
+#plan1 {
+    position: absolute;
+    width:19.57%;
+    height:7.84%;
+    left:20%;
+    top: 10.78%
+}
+.s1 #plan1{
+    -webkit-transform: translateX(1200px);
+    transform: translateX(1200px);
+    opacity: 0;
+    transition-delay: 3s,opacity: 0; transition: 5s 0.5s;
+}
+.active #plan1{
+     opacity: 1 ; 
+     -webkit-transform: translateX(0); 
+     transform: translateX(0);
+}
+
+#top1 {
+    position: absolute;
+    width:34.03%;
+    height:25.48%;
+    top: 4.14%;
+    left: 16.83%;
+}
+#yun1 {
+    position: absolute;
+    width:17.59%;
+    height:4.97%;
+    top: 15.19%;
+    left: 66.57%;
+}
+.s1 #yun1{
+    -webkit-transform: translateX(-1200px);
+    transform: translateX(-1200px);
+    opacity: 0;
+    transition-delay: 2.8s,opacity: 0; transition: 2s 0.5s;
+}
+.active #yun1{
+     opacity: 1 ; 
+     -webkit-transform: translateX(0); 
+     transform: translateX(0);
+}
+                        /*第二页*/
+
+#bottom2{
+    width: 100%;
+    height: 18.46%;
+    position: absolute;
+    bottom: 1%;
+    left: 1%;
+}
+#car2{
+    width: 14.72%;
+    height: 4.97%;
+    position: absolute;
+    bottom: 1%;
+    left: 15%;
+}
+.s2 #car2{
+    -webkit-transform: translateX(1000px);
+    transform: translateX(1000px);
+    transition-delay: 2.8s,opacity: 0; transition: 10s 0.5s;
+}
+.active #car2{
+     opacity: 1 ; 
+     -webkit-transform: translateX(0); 
+     transform: translateX(0);
+}
+#top2{
+    width: 79.92%;
+    height:15.08%;
+    position: absolute;
+    top: 10%;
+    left:10%;
+}
+#yun2{
+    width: 16.51%;
+    height:4.93%;
+    position: absolute;
+    top:14%;
+    right: 20%;
+}
+.s2 #yun2{
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+    opacity: 0;
+    transition-delay: 2s,opacity: 0; transition: 2s 1s;
+}
+.active #yun2{
+     opacity: 1 ; 
+     -webkit-transform: translateX(0); 
+     transform: translateX(0);
+}
+                        /*第三页*/
+#bottom3{
+    position: absolute;
+    width:100%;
+    height:24.69%;
+    bottom:0%;
+    left: 0px;
+}
+#house3{
+    position: absolute;
+    width:32.22%;
+    height:12.8%;
+    bottom: 0%;
+    right: 13%;
+}
+.s3 #house3{
+    -webkit-transform: translateY(500px);
+    transform: translateY(500px);
+    opacity: 0;
+    transition-delay: 2s,opacity: 0; transition: 2s 1s;
+}
+.active #house3{
+     opacity: 1 ; 
+     -webkit-transform: translateY(0); 
+     transform: translateY(0);
+}
+#star3{
+    position: absolute;
+    width:83.81%;
+    height:9.82%;
+    left: 8.5%;
+    top: 10%;
+}
+#top3{
+    position: absolute;
+    width:20.65%;
+    height:8.20%;
+    left: 5%;
+    top: 8%;
+}
+#bottom4{
+    position: absolute;
+    width:100%;
+    height:20.22%;
+    bottom: 2%;
+    left: 0px;
+}
+#car4{
+    position: absolute;
+    width:15.36%;
+    height: 5.79%;
+    bottom: 2%;
+    left: 20%;
+}
+.s4 #car4{
+    -webkit-transform: translateX(1000px);
+    transform: translateX(1000px);
+    transition-delay: 2s,opacity: 0; transition: 8s 1s;
+}
+.active #car4{
+     opacity: 1 ; 
+     -webkit-transform: translateX(0); 
+     transform: translateX(0);
+}
+
+
+#top4{
+    position: absolute;
+    width:71.19%;
+    height: 12.85%;
+    left: 15%;
+    top: 10%;
+}
+#hanbao1{
+    position: absolute;
+    width:91.40%;
+    height:36.56%;
+    top: 32.03%;
+    left:06.98%;
+}
+.s4 #hanbao1{
+     opacity: 0 ; 
+    transition-delay: 2s,opacity: 0; transition: 2s 1s;
+}
+.active #hanbao1{
+     opacity: 1 ; 
+}
+
+#hanbao2{
+    position: absolute;
+    width:56.28%;
+    height: 04.53%;
+    top: 43.61%;
+    left:13.18% ;
+}
+.s4 #hanbao2{
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+    transition-delay: 2s,opacity: 0; transition: 2s 2s;
+}
+.active #hanbao2{
+     opacity: 1 ; 
+     -webkit-transform: translateX(0); 
+     transform: translateX(0);
+}
+
+
+#hanbao3{
+    position: absolute;
+    width:56.60%;
+    height: 04.53%;
+    top: 48.24%;
+    left:37.66% ;
+}
+.s4 #hanbao3{
+    -webkit-transform: translateX(1000px);
+    transform: translateX(1000px);
+    transition-delay: 2s,opacity: 0; transition: 4s 1s;
+}
+.active #hanbao3{
+     opacity: 1 ; 
+     -webkit-transform: translateX(0); 
+     transform: translateX(0);
+}
+
+
+#hanbao4{
+    position: absolute;
+    width:64.05%;
+    height:04.53%;
+    top:52.8% ;
+    left:05.43% ;
+}
+.s4 #hanbao4{
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+    transition-delay: 2s,opacity: 0; transition: 2s 2s;
+}
+.active #hanbao4{
+     opacity: 1 ; 
+     -webkit-transform: translateX(0); 
+     transform: translateX(0);
+}
+
+
+</style>
+<script src="js/jquery.js"></script>
+<script src="js/jquery.fullPage.js"></script>
+<script src="http://cdn.staticfile.org/jquery-easing/1.3/jquery.easing.min.js"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts-all-3.js"></script>
+<script src="http://cdn.bootcss.com/highcharts/4.2.7/highcharts.js"></script>
+<script src="http://cdn.bootcss.com/highcharts/4.2.7/modules/heatmap.js"></script>
+<script src="http://cdn.bootcss.com/highcharts/4.2.7/modules/treemap.js"></script>
+<script src="http://cdn.bootcss.com/highcharts/4.2.7/themes/dark-unica.js"></script>
+<script src="http://cdn.bootcss.com/highcharts/4.2.7/modules/exporting.js"></script>
+<script>
+$(function(){
+    $('#h5').fullpage({
+        sectionsColor: ['#b3b1ae', '#d5e2e9', '#a4a9a9', '#9eb9d4','','#2c343c'],
+        'css3': true,
+        'anchors': ['page1', 'page2', 'page3', 'page4','page5'],
+        'navigation': true,
+        'navigationPosition': 'right',
+
+        afterLoad: function(anchorLink, index){
+            if(index == 2){
+                $('.section2').find('div').fadeIn(1000);
+             
+            }
+            if(index == 3){
+                 $('.section3').find('div').fadeIn(1000);
+                
+              
+            }
+            if(index == 4){
+                $('.section4').find('div').fadeIn(1000);
+                
+            }
+            if(index == 5){
+                 $('.section5').find('div').fadeIn(1000);
+                 
+            }
+            if(index == 6){
+                $('.section6').find('div').fadeIn(1000);
+                 
+            }
+        },
+        onLeave: function(index, direction){
+            if(index == '2'){
+                $('.section2').find('div').fadeOut(2000);
+            }
+            if(index == '3'){
+                $('.section3').find('div').fadeOut(2000);
+            }
+            if(index == '4'){
+                $('.section4').find('div').fadeOut(2000);
+            }
+            if(index == '5'){
+                $('.section5').find('div').fadeOut(2000);
+            }
+            if(index == '6'){
+                $('.section6').find('div').fadeOut(2000);
+            }
+        }
+    });
+});
+</script>
+</head>
+<body>
+
+<div id="h5">
+                                                    <!-- 第一页 -->   
+    <div class="section s1 active section1" id="page-1">
+<div id="test">
+    <img class="tm" id="bottom1" src="img/1bottom.png">
+    <img            id="plan1"src="img/1plan.png">
+    <img class="tm" id="top1"src="img/1top.png">
+    <img            id="yun1" src="img/1yun.png">
+</div>      
+    </div>
+                                                    <!-- 第二页 -->   
+    <div class="section s2 section2" id="page-2" >
+
+    <img class="tm" id="bottom2" src="img/2bottom.png">
+    <img            id="car2"src="img/2che.png">
+    <img class="tm" id="top2"src="img/2top.png">
+    <img            id="yun2" src="img/2yun.png">
+
+
+    </div>
+    <div class="section s3 section3" id="page-3">
+                                                    <!-- 第三页 -->   
+    <img class="tm" id="bottom3" src="img/3bottom.png">
+    <img            id="house3"src="img/3house.png">
+    <img class="tm" id="star3"src="img/3star.png">
+    <img class="tm" id="top3" src="img/3top.png">
+
+       
+    </div>
+    <div class="section s4 section4" id="page-4">
+                                                     <!-- 第四页 -->
+    <img class="tm" id="bottom4" src="img/4bottom.png">
+    <img            id="car4"src="img/4car.png">
+    <img class="tm" id="top4"src="img/4top.png">
+    <img            id="hanbao1"src="img/hanbao1.png">
+    <img            id="hanbao2"src="img/hanbao2.png">
+    <img            id="hanbao3"src="img/hanbao3.png">
+    <img            id="hanbao4"src="img/hanbao4.png">
+
+        
+    </div>
+                                                    <!-- 第5页 -->
+    <div class="section s5 section5" id="page-5">
+    </div>
+
+</div>
+
+</body>
+</html>
