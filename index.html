@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<meta charset="utf-8">
 <head>
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 
 window.onLoad=function hengshuping(){ 
   if(window.orientation==180||window.orientation==0){ 
@@ -11,301 +13,29 @@ if(window.orientation==90||window.orientation==-90){
         alert("横屏状态！")         
     } 
  } 
- </script>
+ </script> -->
 <!-- <meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="format-detection" content="telephone=no"> -->
-<meta charset="utf-8">
+
 <title></title>
 <link rel="stylesheet" href="css/jquery.fullPage.css">
+<link rel="stylesheet" media="all and (orientation:portrait)" href="css/shu.css">
+<link rel="stylesheet" media="all and (orientation:landscape)" href="css/hen.css">
 <style>
-body{
-    max-width: 960px;
-
-}
-#page-1{
-    position: relative;
-    border-radius:4%; 
-}
-#page-2{
-    position: relative;
-    border-radius: 4%;
-}   
-#page-3{
-    position: relative;
-    border-radius: 4%;
-}
-#page-4{
-    position: relative;
-    border-radius: 4%;
-}
-.tm{
-    opacity: 0.6;
-}
-.tm:hover{
-    opacity: 1;
-}
-
-
-                        /*第一页*/
-#bottom1 {
-    position: absolute;
-    width: 99.62%;
-    height: 21.16%;
-    bottom: 0px;
-    left: 0px;
-}
-#plan1 {
-    position: absolute;
-    width:19.57%;
-    height:7.84%;
-    left:20%;
-    top: 10.78%
-}
-.s1 #plan1{
-    -webkit-transform: translateX(1200px);
-    transform: translateX(1200px);
-    opacity: 0;
-    transition-delay: 3s,opacity: 0; transition: 5s 0.5s;
-}
-.active #plan1{
-     opacity: 1 ; 
-     -webkit-transform: translateX(0); 
-     transform: translateX(0);
-}
-
-#top1 {
-    position: absolute;
-    width:34.03%;
-    height:25.48%;
-    top: 4.14%;
-    left: 16.83%;
-}
-#yun1 {
-    position: absolute;
-    width:17.59%;
-    height:4.97%;
-    top: 15.19%;
-    left: 66.57%;
-}
-.s1 #yun1{
-    -webkit-transform: translateX(-1200px);
-    transform: translateX(-1200px);
-    opacity: 0;
-    transition-delay: 2.8s,opacity: 0; transition: 2s 0.5s;
-}
-.active #yun1{
-     opacity: 1 ; 
-     -webkit-transform: translateX(0); 
-     transform: translateX(0);
-}
-                        /*第二页*/
-
-#bottom2{
-    width: 100%;
-    height: 18.46%;
-    position: absolute;
-    bottom: 1%;
-    left: 1%;
-}
-#car2{
-    width: 14.72%;
-    height: 4.97%;
-    position: absolute;
-    bottom: 1%;
-    left: 15%;
-}
-.s2 #car2{
-    -webkit-transform: translateX(1000px);
-    transform: translateX(1000px);
-    transition-delay: 2.8s,opacity: 0; transition: 10s 0.5s;
-}
-.active #car2{
-     opacity: 1 ; 
-     -webkit-transform: translateX(0); 
-     transform: translateX(0);
-}
-#top2{
-    width: 79.92%;
-    height:15.08%;
-    position: absolute;
-    top: 10%;
-    left:10%;
-}
-#yun2{
-    width: 16.51%;
-    height:4.93%;
-    position: absolute;
-    top:14%;
-    right: 20%;
-}
-.s2 #yun2{
-    -webkit-transform: translateX(-1000px);
-    transform: translateX(-1000px);
-    opacity: 0;
-    transition-delay: 2s,opacity: 0; transition: 2s 1s;
-}
-.active #yun2{
-     opacity: 1 ; 
-     -webkit-transform: translateX(0); 
-     transform: translateX(0);
-}
-                        /*第三页*/
-#bottom3{
-    position: absolute;
-    width:100%;
-    height:24.69%;
-    bottom:0%;
-    left: 0px;
-}
-#house3{
-    position: absolute;
-    width:32.22%;
-    height:12.8%;
-    bottom: 0%;
-    right: 13%;
-}
-.s3 #house3{
-    -webkit-transform: translateY(500px);
-    transform: translateY(500px);
-    opacity: 0;
-    transition-delay: 2s,opacity: 0; transition: 2s 1s;
-}
-.active #house3{
-     opacity: 1 ; 
-     -webkit-transform: translateY(0); 
-     transform: translateY(0);
-}
-#star3{
-    position: absolute;
-    width:83.81%;
-    height:9.82%;
-    left: 8.5%;
-    top: 10%;
-}
-#top3{
-    position: absolute;
-    width:20.65%;
-    height:8.20%;
-    left: 5%;
-    top: 8%;
-}
-#bottom4{
-    position: absolute;
-    width:100%;
-    height:20.22%;
-    bottom: 2%;
-    left: 0px;
-}
-#car4{
-    position: absolute;
-    width:15.36%;
-    height: 5.79%;
-    bottom: 2%;
-    left: 20%;
-}
-.s4 #car4{
-    -webkit-transform: translateX(1000px);
-    transform: translateX(1000px);
-    transition-delay: 2s,opacity: 0; transition: 8s 1s;
-}
-.active #car4{
-     opacity: 1 ; 
-     -webkit-transform: translateX(0); 
-     transform: translateX(0);
-}
-
-
-#top4{
-    position: absolute;
-    width:71.19%;
-    height: 12.85%;
-    left: 15%;
-    top: 10%;
-}
-#hanbao1{
-    position: absolute;
-    width:91.40%;
-    height:36.56%;
-    top: 32.03%;
-    left:06.98%;
-}
-.s4 #hanbao1{
-     opacity: 0 ; 
-    transition-delay: 2s,opacity: 0; transition: 2s 1s;
-}
-.active #hanbao1{
-     opacity: 1 ; 
-}
-
-#hanbao2{
-    position: absolute;
-    width:56.28%;
-    height: 04.53%;
-    top: 43.61%;
-    left:13.18% ;
-}
-.s4 #hanbao2{
-    -webkit-transform: translateX(-1000px);
-    transform: translateX(-1000px);
-    transition-delay: 2s,opacity: 0; transition: 2s 2s;
-}
-.active #hanbao2{
-     opacity: 1 ; 
-     -webkit-transform: translateX(0); 
-     transform: translateX(0);
-}
-
-
-#hanbao3{
-    position: absolute;
-    width:56.60%;
-    height: 04.53%;
-    top: 48.24%;
-    left:37.66% ;
-}
-.s4 #hanbao3{
-    -webkit-transform: translateX(1000px);
-    transform: translateX(1000px);
-    transition-delay: 2s,opacity: 0; transition: 4s 1s;
-}
-.active #hanbao3{
-     opacity: 1 ; 
-     -webkit-transform: translateX(0); 
-     transform: translateX(0);
-}
-
-
-#hanbao4{
-    position: absolute;
-    width:64.05%;
-    height:04.53%;
-    top:52.8% ;
-    left:05.43% ;
-}
-.s4 #hanbao4{
-    -webkit-transform: translateX(-1000px);
-    transform: translateX(-1000px);
-    transition-delay: 2s,opacity: 0; transition: 2s 2s;
-}
-.active #hanbao4{
-     opacity: 1 ; 
-     -webkit-transform: translateX(0); 
-     transform: translateX(0);
-}
 
 
 </style>
 <script src="js/jquery.js"></script>
 <script src="js/jquery.fullPage.js"></script>
-<script src="http://cdn.staticfile.org/jquery-easing/1.3/jquery.easing.min.js"></script>
-<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts-all-3.js"></script>
+<script src="http://cdn.staticfile.org/jquery-easing/1.3/jquery.easing.min.js"></script>        
 <script src="http://cdn.bootcss.com/highcharts/4.2.7/highcharts.js"></script>
-<script src="http://cdn.bootcss.com/highcharts/4.2.7/modules/heatmap.js"></script>
-<script src="http://cdn.bootcss.com/highcharts/4.2.7/modules/treemap.js"></script>
-<script src="http://cdn.bootcss.com/highcharts/4.2.7/themes/dark-unica.js"></script>
+<script src="http://cdn.bootcss.com/highcharts/4.2.7/highcharts-3d.js"></script>
 <script src="http://cdn.bootcss.com/highcharts/4.2.7/modules/exporting.js"></script>
+<script src="js/tu1.js"></script>
+<script src="js/tu2.js"></script>
+<script src="js/tu3.js"></script>
 <script>
 $(function(){
     $('#h5').fullpage({
@@ -316,24 +46,24 @@ $(function(){
         'navigationPosition': 'right',
 
         afterLoad: function(anchorLink, index){
-            if(index == 2){
+            if(index == 1){
                 $('.section2').find('div');
-             
+                i();
             }
-            if(index == 3){
+            if(index == 2){
                  $('.section3').find('div');
-                
+                j();
               
             }
-            if(index == 4){
+            if(index == 3){
                 $('.section4').find('div');
-                
+                q();
             }
-            if(index == 5){
+            if(index == 4){
                  $('.section5').find('div');
                  
             }
-            if(index == 6){
+            if(index == 5){
                 $('.section6').find('div');
                  
             }
@@ -365,40 +95,271 @@ $(function(){
                                                     <!-- 第一页 -->   
     <div class="section s1 active section1" id="page-1">
 <div id="test">
-    <img class="tm" id="bottom1" src="img/1bottom.png">
-    <img            id="plan1"src="img/1plan.png">
-    <img class="tm" id="top1"src="img/1top.png">
-    <img            id="yun1" src="img/1yun.png">
+    <img id="bottom1" src="img/1bottom.png">
+    <img id="plan1" src="img/1plan.png">
+    <img id="top1" src="img/1top.png">
+    <img id="yun1" src="img/1yun.png">
+    <div id="container1">
+    </div>
+    <script type="text/javascript">
+            function i(){
+            $(function () {
+    $('#container1').highcharts({
+        chart: {
+            type: 'areaspline',
+             backgroundColor: null,
+        },
+        title: {
+            text: '一季度全国与贵州建筑业总产值增速对比'
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'left',
+            verticalAlign: 'top',
+            x: 80,
+            y: 25,
+            floating: true,
+            borderWidth: 1,
+        },
+        xAxis: {
+            categories: [
+                '2015年一季度',
+                '2015年二季度',
+                '2015年三季度',
+                '2015年四季度',
+                '2016年一季度'
+            ],
+            plotBands: [{ // visualize the weekend
+                from: 4.5,
+                to: 6.5,
+                color: 'rgba(68, 170, 213, .2)'
+            }]
+        },
+        yAxis: {
+            title: {
+                text: null
+            }
+        },
+        tooltip: {
+            shared: true,
+            valueSuffix: ' %'
+        },
+        credits: {
+            enabled: false
+        },
+        plotOptions: {
+            areaspline: {
+                fillOpacity: 0.5
+            }
+        },
+        series: [{
+            name: '全国建筑业增速（%）',
+            data: [18.8, 18.5, 19.7, 18.7, 19.1]
+        }, {
+            name: '贵州省建筑业增速（%）',
+            data: [10.1,4.3,2.3,2.3,6.8]
+        }],
+         exporting: {
+            enabled: false
+        },
+    });
+});
+}
+                   </script>
 </div>      
     </div>
                                                     <!-- 第二页 -->   
     <div class="section s2 section2" id="page-2" >
 
-    <img class="tm" id="bottom2" src="img/2bottom.png">
-    <img            id="car2"src="img/2che.png">
-    <img class="tm" id="top2"src="img/2top.png">
-    <img            id="yun2" src="img/2yun.png">
+    <img id="bottom2" src="img/2bottom.png">
+    <img id="car2"	src="img/2che.png">
+    <img id="top2"	src="img/2top.png">
+    <img id="yun2" src="img/2yun.png">
+    <div id="container2">
+    </div>
+  <script type="text/javascript">
+            function j(){
+           $(function () {
+    $('#container2').highcharts({
+        chart: {
+            type: 'pie',
+             backgroundColor: null,
+            options3d: {
+                enabled: true,
+                alpha: 45,
+            }
+        },
+        colors: ['#D9D5B4','#C16363', '#2B5B54'],
+        title: {
+            text: '安装工程       产值占比',
+            style:{
+                fontSize:'30px'
+            }
+        },
+        subtitle: {
+            text: '3D环图',
+            style:{
+                fontSize:'20px'
+            }
+        },
+        tooltip: {
+            borderRadius: 20,              
+            style:{     fontSize:'15px', 
+                        fontWeight: 'bold'},
+            valueSuffix: ' %'
+        },
+        plotOptions: {
+            pie: {
+                innerSize: 30,
+                depth: 20
+            }
+        },
+        series: [{
+            name: '占比',
+            data: [
+                ['特、一级资质企业', 64.3],
+                ['二级资质企业', 18.2],
+                ['三级资质企业', 17.5],
+            ]
+        }],
+                 exporting: {
+            enabled: false
+        },
 
+    });
+});
+}
+                   </script>
 
     </div>
     <div class="section s3 section3" id="page-3">
                                                     <!-- 第三页 -->   
-    <img class="tm" id="bottom3" src="img/3bottom.png">
-    <img            id="house3"src="img/3house.png">
-    <img class="tm" id="star3"src="img/3star.png">
-    <img class="tm" id="top3" src="img/3top.png">
-
+    <img id="bottom3" src="img/3bottom.png">
+    <img id="house3"	src="img/3house.png">
+    <img id="star3"	src="img/3star.png">
+    <img id="top3" src="img/3top.png">
+<div id="container3"></div>
+   <script type="text/javascript">  
+     function q(){
+     $(function () {
+    var colors = Highcharts.getOptions().colors,
+        categories = ['建筑工程', '安装工程', '其他'],
+        data = [{
+            y: 361.60,
+            color: colors[1],
+            drilldown: {
+                name: '建筑工程',
+                categories: ['建筑工程'],
+                data: [89.0],
+                color: colors[8]
+            }
+        }, {
+            y: 28.19,
+            color: colors[7],
+            drilldown: {
+                name: '安装工程',
+                categories: ['安装工程'],
+                data: [7.0],
+                color: colors[10]
+            }
+        }, {
+            y: 16.28,
+            color: colors[3],
+            drilldown: {
+                name: '其他',
+                categories: ['其他'],
+                data: [4.0],
+                color: colors[3]
+            }
+        },],
+        browserData = [],
+        versionsData = [],
+        i,
+        j,
+        dataLen = data.length,
+        drillDataLen,
+        brightness;
+    // Build the data arrays
+    for (i = 0; i < dataLen; i += 1) {
+        // add browser data
+        browserData.push({
+            name: categories[i],
+            y: data[i].y,
+            color: data[i].color
+        });
+        // add version data
+        drillDataLen = data[i].drilldown.data.length;
+        for (j = 0; j < drillDataLen; j += 1) {
+            brightness = 0.2 - (j / drillDataLen) / 5;
+            versionsData.push({
+                name: data[i].drilldown.categories[j],
+                y: data[i].drilldown.data[j],
+                color: Highcharts.Color(data[i].color).brighten(brightness).get()
+            });
+        }
+    }
+    // Create the chart
+    $('#container3').highcharts({
+        chart: {
+            type: 'pie',
+            backgroundColor: null,
+        },
+        tooltip:{style:{fontWeight:'bold'}},
+        title: {
+            text: 'Browser market share, April, 2011'
+        },
+        yAxis: {
+            title: {
+                text: 'Total percent market share'
+            }
+        },
+        plotOptions: {
+            pie: {
+                shadow: false,
+                center: ['50%', '50%']
+            }
+        },
+        series: [{
+            name: '产值（亿元）',
+            data: browserData,
+            size: '60%',
+            dataLabels: {
+                formatter: function () {
+                    return this.y > 5 ? this.point.name : null;
+                },
+                color: 'black',
+                distance: -30
+            }
+        }, {
+            name: '占建筑业总产值比重(%)',
+            data: versionsData,
+            size: '80%',
+            innerSize: '60%',
+            dataLabels: {
+                formatter: function () {
+                    // display only if larger than 1
+                    return this.y > 1 ? '<b>' + this.point.name + ':</b> ' + this.y + '%'  : null;
+                }
+            }
+        }],
+                 exporting: {
+            enabled: false
+        },
+    });
+});}
+</script>
        
     </div>
     <div class="section s4 section4" id="page-4">
                                                      <!-- 第四页 -->
-    <img class="tm" id="bottom4" src="img/4bottom.png">
-    <img            id="car4"src="img/4car.png">
-    <img class="tm" id="top4"src="img/4top.png">
-    <img            id="hanbao1"src="img/hanbao1.png">
-    <img            id="hanbao2"src="img/hanbao2.png">
-    <img            id="hanbao3"src="img/hanbao3.png">
-    <img            id="hanbao4"src="img/hanbao4.png">
+    <img id="bottom4" src="img/4bottom.png">
+    <img id="car4"	src="img/4car.png">
+    <img id="top4"	src="img/4top.png">
+    <img id="hanbao1"	src="img/hanbao1.png" >
+    <img id="hanbao2"	src="img/hanbao2.png" >
+    <img id="hanbao3"	src="img/hanbao3.png" >
+    <img id="hanbao4"	src="img/hanbao4.png" >
+    <img id="hanbao5"   src="img/hanbao5.png" >
 
         
     </div>
